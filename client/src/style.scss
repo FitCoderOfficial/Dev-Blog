@@ -177,7 +177,7 @@ $lightGreen : #b9e7e7;
                     content: "";
                     width: 100%;
                     height: 100%;
-                    background-color: $lightGreen;
+                    background-color: #bfdbfe;
                     position: absolute;
                     top: 20px;
                     left: -20px;
@@ -247,6 +247,7 @@ $lightGreen : #b9e7e7;
             gap: 30px;
 
             img {
+                border-radius: 8px;
                 width: 100%;
                 height: 300px;
                 object-fit: cover;
@@ -281,6 +282,7 @@ $lightGreen : #b9e7e7;
                 gap: 5px;
 
                 img {
+                
                 width: 20px;
                 height: 20px;
                 cursor: pointer;
@@ -296,7 +298,7 @@ $lightGreen : #b9e7e7;
             p {
                 font-weight: $noto-sans;
                 text-align: justify;
-                line-height: 30px;
+                line-height: 25px;
             }
             }
             .menu {
@@ -306,6 +308,7 @@ $lightGreen : #b9e7e7;
             gap: 25px;
 
             h1 {
+                font-weight: $noto-sans;
                 font-size: 20px;
                 color: #555;
             }
@@ -319,30 +322,131 @@ $lightGreen : #b9e7e7;
                 width: 100%;
                 height: 200px;
                 object-fit: cover;
+                border-radius: 8px;
                 }
 
                 h2 {
+                font-size: 18px;
+                font-weight: bolder;
+                font-weight: $noto-sans;
                 color: #555;
                 }
 
                 button {
+                font-weight: $noto-sans;
                 width: max-content;
                 padding: 7.5px 15px;
                 border: none;
                 cursor: pointer;
-                color: teal;
-                background-color: white;
-                border: 1px solid teal;
+                color: white;
+                border-radius: 8px;
+                font-weight: bold;
+                background-color: #3b82f6;
+                border: 1px solid white;
 
                 &:hover {
                     border: 1px solid white;
-                    background-color: $lightGreen;
-                    color: black;
+                    background-color: #1d4ed8;
+                    color: white;
                 }
                 }
             }
             }
         }
+
+    //WRITE
+
+    .add {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+  
+        .content {
+          flex: 5;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+  
+          input {
+            padding: 10px;
+            border: 1px solid lightgray;
+          }
+  
+          .editorContainer {
+            height: 500px;
+            overflow: scroll;
+            border: 1px solid lightgray;
+  
+            .editor {
+              height: 100%;
+              border: none;
+            }
+          }
+        }
+  
+        .menu {
+          flex: 2;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+  
+          .item {
+            border: 1px solid lightgray;
+            padding: 10px;
+            flex:1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #555;
+  
+            h1{
+              font-family: $noto-sans;
+              font-size: 20px;
+            }
+  
+            .file{
+              font-family: $noto-sans;
+              text-decoration: underline;
+              cursor: pointer;
+            }
+  
+            .buttons{
+              display: flex;
+              justify-content: space-between;
+  
+              :first-child{
+                font-family: $noto-sans;
+                cursor: pointer;
+                color: white;
+                background-color: #3b82f6;
+                border: 1px solid #3b82f6;
+                border-radius: 5px;
+                padding: 3px 5px;
+              }
+              :last-child{
+                font-family: $noto-sans;
+                cursor: pointer;
+                color: white;
+                border-radius: 5px;
+                background-color: #3b82f6;
+                border: 1px solid #3b82f6;
+                padding: 3px 5px;
+              }
+            }
+  
+            .cat{
+              font-family: $noto-sans;
+              display: flex;
+              align-items: center;
+              gap: 3px;
+              color: #0ea5e9;
+            }
+          }
+        }
+    }
+
+
 
 
     }
