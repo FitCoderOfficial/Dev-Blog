@@ -5,7 +5,7 @@ import bcryt from 'bcryptjs'
 export const register = (req, res)=> {
     const q = "SELECT * FROM users WHERE email = ? OR username ?"
 
-    db.query(q,[req.body.email, req.body.name], (error, data)=>{
+    db.query(q,[req.body.email, req.body.username], (err, data)=>{
         if(err) return res.json(err)
         if(data.length) return res.status(409).json("이미 존재하는 이름입니다!")
 
